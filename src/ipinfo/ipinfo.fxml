@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ipinfo.Controller">
+   <bottom>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <Region HBox.hgrow="ALWAYS" />
+            <Region layoutX="448.0" layoutY="18.0" HBox.hgrow="ALWAYS" />
+            <TextField fx:id="ipTextBox" prefWidth="160.0" HBox.hgrow="NEVER">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin>
+            </TextField>
+            <Button fx:id="fetchData" mnemonicParsing="false" onAction="#onFetch" text="Fetch">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin></Button>
+            <Region layoutX="10.0" layoutY="10.0" HBox.hgrow="ALWAYS" />
+            <Button fx:id="save" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSave" text="Save" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Region layoutX="10.0" layoutY="10.0" HBox.hgrow="ALWAYS" />
+            <Region layoutX="479.0" layoutY="18.0" HBox.hgrow="ALWAYS" />
+         </children>
+         <padding>
+            <Insets bottom="8.0" top="8.0" />
+         </padding></HBox>
+   </bottom>
+   <center>
+      <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" BorderPane.alignment="CENTER">
+         <content>
+            <VBox fx:id="lblBox" prefWidth="230.0" spacing="4.0">
+               <children>
+                  <Label fx:id="status" />
+                  <Label fx:id="continent" />
+                  <Label fx:id="continentCode" />
+                  <Label fx:id="country" />
+                  <Label fx:id="countryCode" />
+                  <Label fx:id="region" />
+                  <Label fx:id="regionName" />
+                  <Label fx:id="city" />
+                  <Label fx:id="district" />
+                  <Label fx:id="zip" />
+                  <Label fx:id="lat" />
+                  <Label fx:id="lon" />
+                  <Label fx:id="timezone" />
+                  <Label fx:id="offset" />
+                  <Label fx:id="currency" />
+                  <Label fx:id="isp" />
+                  <Label fx:id="org" />
+                  <Label fx:id="as" />
+                  <Label fx:id="asname" />
+                  <Label fx:id="mobile" />
+                  <Label fx:id="proxy" />
+                  <Label fx:id="hosting" />
+                  <Label fx:id="query" />
+               </children>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </center>
+   <left>
+      <ScrollPane hbarPolicy="NEVER" BorderPane.alignment="CENTER">
+         <content>
+            <VBox fx:id="checkerBox" prefHeight="283.0" prefWidth="200.0" spacing="4.0">
+               <children>
+                  <CheckBox fx:id="chkstatus" mnemonicParsing="false" text="status" />
+                  <CheckBox fx:id="chkcontinent" mnemonicParsing="false" text="continent" />
+                  <CheckBox fx:id="chkcontinentCode" mnemonicParsing="false" text="continentCode" />
+                  <CheckBox fx:id="chkcountry" mnemonicParsing="false" text="country" />
+                  <CheckBox fx:id="chkcountryCode" mnemonicParsing="false" text="countryCode" />
+                  <CheckBox fx:id="chkregion" mnemonicParsing="false" text="region" />
+                  <CheckBox fx:id="chkregionName" mnemonicParsing="false" text="regionName" />
+                  <CheckBox fx:id="chkcity" mnemonicParsing="false" text="city" />
+                  <CheckBox fx:id="chkdistrict" mnemonicParsing="false" text="district" />
+                  <CheckBox fx:id="chkzip" mnemonicParsing="false" text="zip" />
+                  <CheckBox fx:id="chklat" mnemonicParsing="false" text="lat" />
+                  <CheckBox fx:id="chklon" mnemonicParsing="false" text="lon" />
+                  <CheckBox fx:id="chktimezone" mnemonicParsing="false" text="timezone" />
+                  <CheckBox fx:id="chkoffset" mnemonicParsing="false" text="offset" />
+                  <CheckBox fx:id="chkcurrency" mnemonicParsing="false" text="currency" />
+                  <CheckBox fx:id="chkisp" mnemonicParsing="false" text="isp" />
+                  <CheckBox fx:id="chkorg" mnemonicParsing="false" text="org" />
+                  <CheckBox fx:id="chkas" mnemonicParsing="false" text="as" />
+                  <CheckBox fx:id="chkasname" mnemonicParsing="false" text="asname" />
+                  <CheckBox fx:id="chkmobile" mnemonicParsing="false" text="mobile" />
+                  <CheckBox fx:id="chkproxy" mnemonicParsing="false" text="proxy" />
+                  <CheckBox fx:id="chkhosting" mnemonicParsing="false" text="hosting" />
+                  <CheckBox fx:id="chkquery" mnemonicParsing="false" text="query" />
+               </children>
+               <padding>
+                  <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </left>
+   <top>
+      <HBox alignment="CENTER" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Queries to send" textAlignment="CENTER" HBox.hgrow="ALWAYS" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label alignment="CENTER" contentDisplay="CENTER" text="API feedback" textAlignment="CENTER" HBox.hgrow="ALWAYS" />
+            <Region HBox.hgrow="ALWAYS" />
+            <Label alignment="CENTER" contentDisplay="CENTER" text="This PC info" textAlignment="CENTER" HBox.hgrow="ALWAYS" />
+            <Region layoutX="118.0" layoutY="14.0" />
+         </children>
+         <padding>
+            <Insets bottom="4.0" left="4.0" right="4.0" top="4.0" />
+         </padding>
+      </HBox>
+   </top>
+   <right>
+      <VBox prefHeight="284.0" prefWidth="140.0">
+         <children>
+            <Region prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+            <Label text="Local Address" />
+            <Label fx:id="localip" text="" />
+            <Region prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Public Address" />
+            <Label fx:id="publicip" text="" />
+            <Region prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+         </children>
+         <padding>
+            <Insets bottom="2.0" left="2.0" right="2.0" top="2.0" />
+         </padding>
+      </VBox>
+   </right>
+</BorderPane>
