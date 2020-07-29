@@ -47,4 +47,4 @@ I recommend using **LibericaJDK**'s Full package, since it contains OpenJFX in i
 Set your Java `PATH` to the `bin` folder just run the `.jar` file via terminal with `java -jar ipInfo.jar`.
 
 #### OpenJDK + OpenJFX
-Set your java `PATH` to the `bin` folder and when yo will have to include the JavaFX lib path with `--module-path` and afterwards its modules with `--add-modules` as additional arguments arguments.
+Set your java `PATH` to the `bin` folder and when you will have to include the JavaFX lib path with `--module-path` and afterwards its modules with `--add-modules` as additional arguments.
