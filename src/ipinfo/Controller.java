@@ -88,7 +88,7 @@ public class Controller implements Initializable {
             try (FileWriter fw = new FileWriter(selectedDirectory + "/" + ipTextBox.getText() + ".txt")) {
                 for (Node lbl : lblBox.getChildren()) {
                     if (((Label) lbl).getText() != "") {
-                        fw.write((lbl.getId() + " : " + ((Label) lbl).getText()) + "\n");
+                        fw.write((lbl.getId() + " : " + ((Label) lbl).getText()) + System.lineSeparator());
                     }
                 }
             }
