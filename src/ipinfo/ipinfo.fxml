@@ -17,7 +17,7 @@
          <children>
             <Region HBox.hgrow="ALWAYS" />
             <Region layoutX="448.0" layoutY="18.0" HBox.hgrow="ALWAYS" />
-            <TextField fx:id="ipTextBox" prefWidth="160.0" HBox.hgrow="NEVER">
+            <TextField fx:id="ipTextBox" prefWidth="160.0" promptText="ip to fetch" HBox.hgrow="NEVER">
                <HBox.margin>
                   <Insets right="5.0" />
                </HBox.margin>
@@ -27,8 +27,15 @@
                   <Insets left="5.0" />
                </HBox.margin></Button>
             <Region layoutX="10.0" layoutY="10.0" HBox.hgrow="ALWAYS" />
-            <Button fx:id="save" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSave" text="Save" />
-            <Region HBox.hgrow="ALWAYS" />
+            <Button fx:id="save" alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onSave" text="Save">
+               <HBox.margin>
+                  <Insets right="5.0" />
+               </HBox.margin></Button>
+            <TextField fx:id="filenameField" layoutX="126.0" layoutY="18.0" prefWidth="160.0" promptText="filename">
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </TextField>
             <Region layoutX="10.0" layoutY="10.0" HBox.hgrow="ALWAYS" />
             <Region layoutX="479.0" layoutY="18.0" HBox.hgrow="ALWAYS" />
          </children>
@@ -39,7 +46,7 @@
    <center>
       <ScrollPane hbarPolicy="NEVER" prefHeight="200.0" BorderPane.alignment="CENTER">
          <content>
-            <VBox fx:id="lblBox" prefWidth="230.0" spacing="4.0">
+            <VBox fx:id="lblBox" prefWidth="230.0" spacing="7.0">
                <children>
                   <Label fx:id="status" />
                   <Label fx:id="continent" />
