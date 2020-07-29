@@ -84,8 +84,7 @@ public class Controller implements Initializable {
         File selectedDirectory = dir.showDialog(checkerBox.getScene().getWindow());
 
         if (selectedDirectory != null) {
-            System.out.println(selectedDirectory.getAbsolutePath());
-
+            
             try (FileWriter fw = new FileWriter(selectedDirectory + "/" + ipTextBox.getText() + ".txt")) {
                 for (Node lbl : lblBox.getChildren()) {
                     if (((Label) lbl).getText() != "") {
